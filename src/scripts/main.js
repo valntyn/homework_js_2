@@ -3,7 +3,7 @@ import User from './classes/User.js';
 import RequestController from './utils/fetchClient.js';
 import * as notification from './utils/notification.js';
 
-const postsList = document.querySelector('tbody');
+const userList = document.querySelector('tbody');
 const onAdd = document.querySelector('.form__button');
 const chooseOne = document.querySelector('.form__select');
 const refresh = document.querySelector('.form__refresh');
@@ -11,7 +11,7 @@ const request = new RequestController();
 
 function createList(data) {
   data.map(user => {
-    postsList.insertAdjacentHTML(('afterBegin'), `
+    userList.insertAdjacentHTML(('afterBegin'), `
       <tr class="table-data">
         <td>${user.name}</td>
         <td>${user.phone}</td>
