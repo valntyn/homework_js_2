@@ -1,7 +1,7 @@
 import CustomError from '../classes/Error';
-import fetch from "node-fetch";
+import fetch from 'node-fetch';
 
-const BASE_URL = 'https://mate.academy/students-api/userss';
+const BASE_URL = 'https://mate.academy/students-api/users';
 
 export async function request(url, options) {
   try {
