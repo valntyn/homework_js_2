@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import User from './classes/User.js';
 import RequestController from './utils/fetchClient.js';
 import * as notification from './utils/notification.js';
@@ -9,12 +10,12 @@ const refresh = document.querySelector('.form__refresh');
 const request = new RequestController();
 
 function createList(data) {
-  data.map(post => {
+  data.map(user => {
     postsList.insertAdjacentHTML(('afterBegin'), `
       <tr class="table-data">
-        <td>${post.name}</td>
-        <td>${post.phone}</td>
-        <td>${post.email}</td>
+        <td>${user.name}</td>
+        <td>${user.phone}</td>
+        <td>${user.email}</td>
       </tr>
     `);
   });

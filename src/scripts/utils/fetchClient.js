@@ -1,5 +1,5 @@
+/* eslint-disable no-undef */
 import CustomError from '../classes/Error';
-import fetch from 'node-fetch';
 
 const BASE_URL = 'https://mate.academy/students-api/users';
 
