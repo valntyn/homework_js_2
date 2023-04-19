@@ -53,7 +53,7 @@ h1 {
 
 .header {
   &__block {
-    background-color: tomato;
+    background-color: #00b0c8;
     height: 80px;
     display: flex;
     align-items: center;
@@ -63,7 +63,19 @@ h1 {
 }
 
 .main {
-  margin: 0 auto;
+  &__container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1920px;
+    gap: 30px;
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
 }
 
 .notification {
@@ -72,6 +84,7 @@ h1 {
   min-height: 100px;
   padding: 0 16px;
   box-sizing: border-box;
+  z-index: 100;
 
   border-radius: 10px;
   background: rgba(132, 132, 132, 0.3);
@@ -102,10 +115,136 @@ h1 {
 
 .footer {
   &__block {
-    background-color: tomato;
+    background-color: #00b0c8;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+}
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+
+  &__box-title {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+  }
+
+  &__select {
+    height: 40px;
+  }
+
+  &__refresh {
+    border-radius: 8px;
+    transition: 0.1s linear;
+    background-color: #fff;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__info {
+    margin-bottom: 8px;
+  }
+
+  &__button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: 0.1s linear;
+    margin-bottom: 10px;
+    background-color: #fff;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
+
+    &--submit {
+      height: 40px;
+      margin: 20px 0 10px;
+      color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 24px;
+    }
+  }
+
+  &__button-title {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgba(0, 0, 0, 0.5);
+    height: 54px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    transition: 0.1s linear;
+
+    &:hover {
+      font-weight: 600;
+    }
+
+    &:focus {
+      color: #313237;
+      font-weight: 600;
+    }
+  }
+
+  &__form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__inp {
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  font-size: 18px;
+}
+
+td,
+th {
+  padding: 16px 24px;
+  text-align: left;
+}
+
+thead tr {
+  background-color: #b4e9cf;
+  color: #fff;
+}
+
+thead th {
+  width: 25%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9ecef;
 }
