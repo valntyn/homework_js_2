@@ -1,6 +1,6 @@
 ## [DEMO](https://valntyn.github.io/homework_js_2/)
 
 1. `git clone https://github.com/valntyn/homework_js_2.git`
-2. `cd homework_js_1`
+2. `cd homework_js_2`
 3. `npm install`
 4. `npm start`
